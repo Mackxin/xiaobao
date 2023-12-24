@@ -1,0 +1,69 @@
+body,html,div,section,h1,h2,h3,ul,li,a,header,p,span,article,header{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+::selection{
+    background-color: #ff1d55;
+    color: #fff;
+}
+:root{
+    --ease-in-quad: cubic-bezier(.55,.085,.68,.53);
+    --ease-in-cubic: cubic-bezier(.55,.055,.675,.19);
+    --ease-in-quart: cubic-bezier(.895,.03,.685,.22);
+    --ease-in-quint: cubic-bezier(.755,.05,.855,.06);
+    --ease-in-expo: cubic-bezier(.95,.05,.795,.,035);
+    --ease-in-circ: cubic-bezier(.6,.04,.89,.335);
+    --ease-out-quad: cubic-bezier(.25,.46,.45,.94);
+    --ease-out-cubic: cubic-bezier(.215,.61,.355,1);
+    --ease-out-quart: cubic-bezier(.165,.84,.44,1);
+    --ease-out-quint: cubic-bezier(.23,1,.22,1);
+    --ease-out-expo: cubic-bezier(.19,1,.22,1);
+    --ease-out-circ: cubic-bezier(.075,.82,.165,1);
+    --ease-in-out-quad: cubic-bezier(.455,.03,.515,.955);
+    --ease-in-out-cubic: cubic-bezier(.645,.45,.355,1);
+    --ease-in-out-quart: cubic-bezier(.77,0,.175,1);
+    --ease-in-out-quint: cubic-bezier(.86,0,.07,1);
+    --ease-in-out-expo: cubic-bezier(1,0,0,1);
+    --ease-in-out-circ: cubic-bezier(.785,.135,.15,.86);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 16px;
+}
+@font-face {
+    font-family: 'oppo';
+    src: url('../font/opposans-b-2.ttf');
+}
+
+.xin .xin-left .xin-kezhan a{
+    color: #ff1d55!important;
+    font-weight: 600;
+    font-size: 1rem!important;
+}
+.xin .xin-left .xin-kezhan a:hover{
+    color: #fff!important;
+}
+
+.vip ul li a{
+    color: #ff1d55!important;
+    font-weight: 500;
+}
+.vip ul li a:hover{
+    color: #fff!important;
+}

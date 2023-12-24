@@ -1,0 +1,406 @@
+.element::-webkit-scrollbar {
+    /* display:none; */
+}
+body{
+    background-color: #212529;
+}
+.tuijian{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #212529;
+}
+.tuijian .tuijian-left,
+.tuijian .tuijian-center,
+.tuijian .tuijian-right{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.tuijian .tuijian-left{
+    width: 20%;
+    height: 100%;
+    background-color: #272b2f;
+    border-radius: 0 36px 36px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.tuijian .tuijian-center{
+    width: 80%;
+    height: auto;
+    background-color: #212529;
+    margin-left: 20%;
+}
+.tuijian .tuijian-right{
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    z-index: 888;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+/*左侧开始*/
+.tuijian .tuijian-left a.logo{
+    display: block;
+    width: 80%;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 12px;
+    text-align: left;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    color: #ff1d55;
+    font-weight: 600;
+    transition: .6s ease-in-out;
+}
+
+.tuijian .tuijian-left a.logo:hover{
+    background-color: #3e64ff;
+    transform: scale(1.1);
+    color: #fff;
+}
+.tuijian .tuijian-left ul{
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #3a3f43;
+    border-bottom: 1px solid #3a3f43;
+}
+.tuijian .tuijian-left ul li{
+    width: 100%;
+    margin: 5px 0;
+}
+.tuijian .tuijian-left ul li a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: #617387;
+    text-align: left;
+    text-indent: 5rem;
+    line-height: 50px;
+    transition: .6s ease-in-out;
+    border-radius: 12px;
+}
+.tuijian .tuijian-left ul li a:hover{
+    background-color: #3e64ff;
+    border-radius: 12px;
+    color: #fff;
+    transform: translateX(.6rem);
+}
+.tuijian .tuijian-left .wechat{
+    width: 80%;
+    height: 150px;
+    margin: 2rem 0;
+    border-radius: .8rem;
+    text-align: center;
+    /* background-color: rgba(42, 46, 50, 1); */
+}
+.tuijian .tuijian-left .wechat img{
+    width: 150px;
+    height: 150px;
+    opacity: .8;
+    transition: .6s ease-in-out;
+}
+.tuijian .tuijian-left .wechat img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 6px 2px rgba(255,255,255,0.5);
+}
+/*左侧结束*/
+
+/*中间开始*/
+.tuijian .tuijian-center h1{
+    color: #617387;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    transition: .6s ease-in-out;
+}
+.tuijian .tuijian-center section{
+    width: 100%;
+    border-radius: .8rem;
+    display: flex;
+    margin: .2rem 0;
+}
+.tuijian .tuijian-center section.xin-ad{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.tuijian .tuijian-center section img{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.tuijian .tuijian-center section.con{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+.tuijian .tuijian-center>h2{
+    color: #ff1d55;
+    width: 100%;
+    font-size: 2rem;
+    letter-spacing: .6rem;
+    text-align: center;
+}
+.tuijian .tuijian-center section.con ul li{
+    line-height: 2rem;
+    text-indent: 2rem;
+    transition: all .3s ease-in-out;
+}
+.tuijian .tuijian-center section.con ul li:hover{
+    transform: translateX(1.6rem);
+}
+.tuijian .tuijian-center section.con ul li a{
+    display: inline-block;
+    width: 100%;
+    color: #94a6b9;
+    transition: all .3s ease-in-out;
+}
+.tuijian .tuijian-center section.con ul li a:hover{
+    color: #ff1d55;
+}
+.tuijian .tuijian-center section.con p{
+    line-height: 1.6rem;
+    text-indent: 2rem;
+    color: #617387;
+}
+.tuijian .tuijian-center section.con h2{
+    color: #adb5be;
+    line-height: 3rem;
+}
+.tuijian .tuijian-center section.con p a{
+    color: #839ab3;
+}
+.tuijian .tuijian-center section.zanzhu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tuijian .tuijian-center section.zanzhu img{
+    height: 100%;
+}
+/*中间结束*/
+
+/*右侧开始*/
+.tuijian .tuijian-right section{
+    width: 30%;
+    /* height: auto; */
+    border-radius: .8rem;
+    text-indent: 1rem;
+    padding: .8rem;
+    font-size: .9rem;
+    transition: .6s ease-in-out;
+    /* background-color: rgb(0,0,0); */
+    background-color: rgba(0,0,0, .3);
+    /* background-color: rgba(42, 46, 50, .3); */
+}
+.tuijian .tuijian-right section:hover{
+    box-shadow: inset 0px 0px 6px 2px rgba(255,255,255,0.5);
+}
+.tuijian .tuijian-right section h2{
+    color: #fd413c;
+    text-align: center;
+}
+.tuijian .tuijian-right section p,
+.tuijian .tuijian-right section p a,
+.tuijian .tuijian-right section ul li,
+.tuijian .tuijian-right section ul li a{
+    color: #617387;
+}
+.tuijian .tuijian-right section div{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: .9rem;
+    text-align: right;
+}
+.tuijian .tuijian-right section div time{
+    display: inline-block;
+    padding: 0;
+    color: #b1b3b3;
+    font-weight: bolder;
+}
+.tuijian .tuijian-right section.wenzhang p{
+    line-height: 1.2rem;
+    border-radius: .6rem;
+    margin: .2rem 0;
+    transition: .6s ease-in-out;
+    text-indent: .6rem;
+    /* width: 80%; */
+}
+/* .tuijian .tuijian-right section.wenzhang p:hover{
+    transform: translateX(.6rem);
+    text-indent: 1.2rem;
+}*/
+.tuijian .tuijian-right section.wenzhang p:hover a{
+    color: #fff;
+    transition: .6s ease-in-out;
+} 
+.closebtn{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: 2rem;
+    color: #617387;
+}
+#btn{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 4rem;
+    color: #617387;
+}
+/*右侧结束*/
+
+/* 移动端适配开始 */
+@media (max-width:1850px){
+    .tuijian .tuijian-center section.xin-ad{
+         flex-wrap: wrap;
+    }
+    .tuijian .tuijian-center section.xin-ad div{
+        margin: 1rem;
+    }
+   
+}
+@media (max-width:1717px){    
+    .tuijian .tuijian-left a.logo{
+        text-indent:6rem;
+        height: 60px;
+        line-height: 60px;
+    }
+    .tuijian .tuijian-left a.logo::before{
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        background-size: 60px;
+    }
+}
+@media (max-width:1417px){    
+    .tuijian .tuijian-left a.logo{
+        text-indent:3.6rem;
+    }
+    .tuijian .tuijian-left a.logo::before{
+        left: .2rem;
+    }
+}
+
+@media (max-width:1177px){    
+    .tuijian .tuijian-left a.logo{
+        height: 40px;
+        line-height: 40px;
+        font-size: 1rem;
+        margin: .8rem 0;
+    }
+    .tuijian .tuijian-left a.logo::before{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-size: 40px;
+        left: .6rem;
+    }
+}
+@media (max-width:1217px){
+    .tuijian .tuijian-left ul li a{
+        height: 40px;
+        line-height: 40px;
+        font-size: .8rem;
+        text-indent: 2rem;
+    }
+    .tuijian .tuijian-left .wechat img{
+        width: 100px;
+        height: 100px;
+    }
+    .tuijian .tuijian-center h1{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width:1177px){
+    .tuijian .tuijian-left a.logo{
+        text-indent: 0;
+        text-align: center;
+    }
+    .tuijian .tuijian-left a.logo::before{
+        display: none;
+    }
+    .tuijian .tuijian-left ul li a{
+        text-indent: .6rem;
+        height: 30px;
+        line-height: 30px;
+    }
+    .tuijian .tuijian-center h1{
+        font-size: 1.2rem;
+    }
+    /* .tuijian .tuijian-center section.zanzhu{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .tuijian .tuijian-center section.zanzhu img{
+        width: 50%;
+        max-height: 25rem;
+        display: inline-block;
+    } */
+}
+@media (max-width:700px){
+    .tuijian .tuijian-left{
+        width: 100%;
+        height: 12rem;
+        position: absolute;
+        border-radius: 0 0 36px 36px;
+    }
+    .tuijian .tuijian-left a.logo{
+        font-size: 1.6rem;
+    }
+    .tuijian .tuijian-left ul li a{
+        text-align: center;
+    }
+    .tuijian .tuijian-left .wechat img{
+        display: none;
+    }
+    .tuijian .tuijian-center h1{
+        font-size: .9rem;
+    }
+    .tuijian .tuijian-center{
+        margin-top: 12.2rem;
+        width: 100%;
+        margin-left: 0;
+    }
+    .tuijian .tuijian-center section.con{
+        padding: 0 1rem;
+    }
+    .tuijian .tuijian-center section.xin-ad div{
+        margin: .4rem;
+    }
+    .tuijian .tuijian-left ul li{
+        width: 48%;
+        float: left;
+    }
+    .tuijian .tuijian-right{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .tuijian .tuijian-right section {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .tuijian .tuijian-right section.wenzhang h2{
+        width: 100%;
+    }
+}
+/* 移动端适配结束 */

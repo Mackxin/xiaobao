@@ -1,0 +1,291 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.wrapper .left{
+    width: 16%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 1rem;
+    background-color: #f2f2f8;
+}
+.wrapper .right{
+    width: 84%;
+    margin-left: 16%;
+}
+.wrapper .left .logo{
+    width: 80%;
+    margin: 10%;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper .left .logo a{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.wrapper .left .logo a img{
+    width: 100%;
+    height: 100%;
+}
+.wrapper .left .logo h1{
+    line-height: 80px;
+    color: #010101;
+    font-weight: 600;
+}
+.wrapper .left .author{
+    width: 80%;
+    height: 220px;
+    margin: 10%;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper .left .author a{
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+.wrapper .left .author a img{
+    height: 100%;
+}
+.wrapper .left .author h2{
+    line-height: 58px;
+}
+.wrapper .left ul{
+    width: 80%;
+    margin: 10%;
+    border-radius: 8px;
+}
+.wrapper .left ul li{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    transition: .6s;
+    line-height: 3rem;
+}
+.wrapper .left ul li:first-child{
+    border-radius: 8px 8px 0 0;
+}
+.wrapper .left ul li:last-child{
+    border-radius: 0 0 8px 8px;
+}
+.wrapper .left ul li a{
+    width: 100%;
+    height: 100%;
+}
+.wrapper .left ul li:hover{
+    background-color: #3b79f2;
+    border-radius: 8px;
+    transform: translateX(.8rem);
+}
+
+.wrapper .right{
+    padding: 2rem;
+}
+
+.wrapper .right section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper .right section ul li{
+    width: 20%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin: 2.5%;
+    border-radius: 8px;
+    background-color: blueviolet;
+    transition: .8s;
+}
+.wrapper .right section ul li a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.wrapper .right section ul li:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 720px){
+    .wrapper .left{
+        width: 40%;
+    }
+    .wrapper .left .logo{
+        height: 60px;
+    }
+    .wrapper .left .logo a{
+        width: 60px;
+        height: 60px;
+    }
+    .wrapper .left .logo h1{
+        font-size: 1.2rem;
+        line-height: 60px;
+    }
+    .wrapper .left .author{
+        height: 180px;
+    }
+    .wrapper .left .author a{
+        height: 100px;
+    }
+    .wrapper .left .author h2{
+        line-height: 46px;
+        font-size: 1.2rem;
+    }
+    .wrapper .left ul li{
+        margin: .4rem 0;
+    }
+    .wrapper .left ul li:hover{
+        transform: translateX(.4rem);
+    }
+    .wrapper .right{
+        margin-left: 40%;
+        width: 60%;
+    }
+    .wrapper .right{
+        padding: 1rem;
+    }
+    .wrapper .right h2{
+        text-align: center;
+        line-height: 4rem;
+    }
+    .wrapper .right section ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .wrapper .right section ul li{
+        width: 80%;
+        height: 80px;
+        line-height: 80px;
+    }
+    .wrapper .right section ul li a{
+        font-size: 1.4rem;
+    }
+}
+
+
+.wrapper .right section ul li:nth-of-type(1){ 
+    background: radial-gradient(100% 225% at 100% 0%, #FAFF00 0%, #000000 100%), linear-gradient(235deg, #FF7A00 0%, #000000 100%), linear-gradient(20deg, #241E92 0%, #241E92 30%, #5432D3 calc(30% + 1px), #5432D3 35%, #7B6CF6 calc(35% + 1px), #7B6CF6 50%, #E5A5FF calc(50% + 1px), #E5A5FF 100%), linear-gradient(120deg, #110133 0%, #110133 40%, #00918E calc(40% + 1px), #00918E 60%, #4DD599 calc(60% + 1px), #4DD599 70%, #FFDC34 calc(70% + 1px), #FFDC34 100%);
+    background-blend-mode: overlay, hard-light, overlay, normal;
+}
+.wrapper .right section ul li:nth-of-type(2){
+    background: linear-gradient(238.72deg, #FF0000 0%, #56124F 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, #B7D500 0%, #3300FF 100%);
+    background-blend-mode: hard-light, color-burn, color-dodge, normal;
+}
+.wrapper .right section ul li:nth-of-type(3){
+    background: radial-gradient(100% 225% at 100% 0%, #FF0000 0%, #000000 100%), linear-gradient(236deg, #00C2FF 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 0%, #CDFFEB 36%, #009F9D 36%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+    background-blend-mode: overlay, hard-light, normal;
+}
+.wrapper .right section ul li:nth-of-type(4){
+    background: linear-gradient(123deg, #FFFFFF 0%, #00B2FF 100%), linear-gradient(236deg, #BAFF99 0%, #005E64 100%), linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%), linear-gradient(225deg, #0094FF 20%, #BFF4ED 45%, #280F34 45%, #280F34 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%), linear-gradient(135deg, #0E0220 15%, #0E0220 35%, #E40475 35%, #E40475 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+    background-blend-mode: overlay, overlay, overlay, darken, normal;
+}
+.wrapper .right section ul li:nth-of-type(5){
+    background: linear-gradient(121deg, #AD00FF 0%, #0C0056 100%), linear-gradient(121deg, #FA00FF 0%, rgba(0, 255, 71, 0) 100%), linear-gradient(127deg, #00F0FF 0%, #A80000 100%), radial-gradient(107% 142% at 15% 104%, #F3D0FC 0%, #1700A4 100%), radial-gradient(100% 100% at 50% 0%, #7300A9 0%, #00FFE0 100%), radial-gradient(100% 100% at 50% 0%, #7300A9 0%, #00FFE0 100%), linear-gradient(127deg, #B7D500 0%, #2200AA 100%);
+    background-blend-mode: overlay, color, overlay, difference, color-dodge, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(6){
+    background: linear-gradient(40deg, #155263 9%, #155263 43%, #FF6F3C calc(43% + 1px), #FF6F3C 52%, #FF9A3C calc(52% + 1px), #FF9A3C 80%, #FFC93C calc(80% + 1px), #FFC93C 100%);
+}
+.wrapper .right section ul li:nth-of-type(7){
+    background: linear-gradient(129.96deg, #FF2F2F 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #FFFFFF 0%, #020063 100%), linear-gradient(121.18deg, #1400FF 0.45%, #3A0000 100%), linear-gradient(154.03deg, #FF002E 0%, #FF003D 74.04%), linear-gradient(341.1deg, #B25BBA 7.52%, #1700A7 77.98%), linear-gradient(222.34deg, #0047FF 12.99%, #FF0000 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
+    background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(8){
+    background: linear-gradient(328.78deg, #030086 14.45%, #BD6177 84.36%), linear-gradient(301.28deg, #209B4A 0%, #7000FF 100%), radial-gradient(100% 138.56% at 100% 0%, #D50000 0%, #00FFE0 100%), radial-gradient(100% 148.07% at 0% 0%, #D50000 0%, #00FFFF 100%);
+    background-blend-mode: soft-light, overlay, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(9){
+    background: linear-gradient(253.11deg, #FFFFFF 8.42%, #00317A 100%), linear-gradient(270deg, #001F8B 0%, #AB0000 100%), linear-gradient(180deg, #FF876C 0%, #005B83 42.5%, #79FFA7 100%), radial-gradient(100% 200% at 0% 0%, #FFFFFF 0%, #2400B4 100%), linear-gradient(180deg, #42FF00 0%, #7500AC 100%), linear-gradient(133.98deg, #F90000 30.43%, #0073B4 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+    background-blend-mode: multiply, overlay, color-dodge, darken, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(10){
+    background: linear-gradient(121.28deg, #8000FF 0%, #000000 100%), linear-gradient(180deg, #00FF19 0%, #000000 100%), linear-gradient(52.23deg, #0500FF 0%, #00FFB2 100%), linear-gradient(121.28deg, #32003A 0%, #FF4040 100%), radial-gradient(50% 72.12% at 50% 50%, #EB00FF 0%, #110055 100%);
+    background-blend-mode: screen, overlay, difference, color-dodge, normal;
+}
+.wrapper .right section ul li:nth-of-type(11){
+    background: linear-gradient(50.22deg, #00A3FF 0%, rgba(255, 255, 255, 0) 48.22%), linear-gradient(238.72deg, #FF0000 0%, #7000FF 100%), linear-gradient(301.28deg, #FF0000 0%, #1D0027 100%), linear-gradient(121.28deg, #207A00 0%, #950000 100%), linear-gradient(238.72deg, #FFB800 0%, #000000 100%), linear-gradient(238.72deg, #00D1FF 0%, #FF0000 100%), linear-gradient(58.72deg, #B80000 0%, #1B00C2 100%), linear-gradient(125.95deg, #00E0FF 10.95%, #87009D 100%), linear-gradient(263.7deg, #B60000 3.43%, #B100A0 96.57%), linear-gradient(130.22deg, #8FA600 18.02%, #5A31FF 100%);
+    background-blend-mode: multiply, overlay, difference, color-dodge, difference, lighten, difference, color-dodge, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(12){
+    background: linear-gradient(238.72deg, #9086FF 0%, #000000 100%), linear-gradient(301.28deg, #FF0000 0%, #20002C 100%), linear-gradient(121.28deg, #207A00 0%, #950000 100%), linear-gradient(238.72deg, #00D1FF 0%, #000000 100%), linear-gradient(238.72deg, #00D1FF 0%, #A80000 100%), linear-gradient(58.72deg, #B80000 0%, #1B00C2 100%), linear-gradient(125.95deg, #00E0FF 10.95%, #87009D 100%), linear-gradient(263.7deg, #B60000 3.43%, #B100A0 96.57%), linear-gradient(320.54deg, #800000 0%, #00C2FF 72.37%), linear-gradient(130.22deg, #B9C900 18.02%, #8F73FF 100%);
+    background-blend-mode: color-dodge, difference, color-dodge, difference, lighten, difference, color-dodge, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(13){
+    background: linear-gradient(301.28deg, #370017 0%, #48DD9E 100%), linear-gradient(294.84deg, #5A60E4 0%, #A9D300 100%), linear-gradient(83.76deg, #FFD058 3.4%, #00871E 96.6%), radial-gradient(100% 138.69% at 100% 0%, #7700D5 0%, #002E34 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+    background-blend-mode: soft-light, difference, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(14){
+    background: linear-gradient(301.28deg, #FF0000 0%, #1D0027 100%), linear-gradient(121.28deg, #207A00 0%, #950000 100%), linear-gradient(238.72deg, #FFB800 0%, #000000 100%), linear-gradient(238.72deg, #00D1FF 0%, #A80000 100%), linear-gradient(125.95deg, #00E0FF 10.95%, #87009D 100%), linear-gradient(263.7deg, #B60000 3.43%, #B100A0 96.57%), linear-gradient(320.54deg, #800000 0%, #00C2FF 72.37%), linear-gradient(130.22deg, #8FA600 18.02%, #5A31FF 100%);
+    background-blend-mode: difference, color-dodge, difference, lighten, color-dodge, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(15){
+    background: linear-gradient(134.39deg, #FFFBD6 9.97%, #302B00 87%), linear-gradient(180deg, #FF7373 0%, #4E0000 100%), linear-gradient(229.79deg, #7534FF 0%, #000000 94.19%), radial-gradient(56.26% 101.79% at 50% 0%, #8F00FF 0%, #493500 100%), linear-gradient(96.19deg, #D5B300 3.37%, #500052 96.63%);
+    background-blend-mode: soft-light, color-dodge, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(16){
+    background: linear-gradient(140.54deg, #D35F5F 27.63%, #ECFF7A 100%), linear-gradient(121.28deg, #000000 0%, #FFCBCB 100%), linear-gradient(121.28deg, rgba(255, 0, 168, 0) 0%, #FFFFFF 100%), linear-gradient(140.54deg, #7000FF 0%, #001AFF 72.37%), linear-gradient(307.43deg, #FFE927 0%, #00114D 100%), radial-gradient(107% 142.8% at 15.71% 104.5%, #FFFFFF 0%, #A7AA00 100%), radial-gradient(100.22% 100% at 70.57% 0%, #7A3B00 0%, #1DAC92 100%);
+    background-blend-mode: overlay, darken, soft-light, difference, difference, difference, exclusion;
+}
+.wrapper .right section ul li:nth-of-type(17){
+    background: linear-gradient(301.28deg, #630000 0%, #000000 100%), linear-gradient(121.28deg, #207A00 0%, #950000 100%), linear-gradient(238.72deg, #FFB800 0%, #000000 100%), linear-gradient(238.72deg, #00D1FF 0%, #A80000 100%), linear-gradient(58.72deg, #B80000 0%, #1B00C2 100%), linear-gradient(125.95deg, #00E0FF 10.95%, #87009D 100%), linear-gradient(263.7deg, #B60000 3.43%, #B100A0 96.57%), linear-gradient(320.54deg, #800000 0%, #00C2FF 72.37%), linear-gradient(130.22deg, #8FA600 18.02%, #5A31FF 100%);
+    background-blend-mode: overlay, color-dodge, difference, lighten, difference, color-dodge, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(18){
+    background: linear-gradient(42.52deg, rgba(255, 77, 0, 0.5) 14.06%, rgba(0, 117, 255, 0.5) 96.79%), radial-gradient(82.5% 115.5% at 23.57% 109.25%, #C4FFFB 0%, #3300FF 100%), radial-gradient(70.71% 99% at 100% 39.75%, #D50D00 0%, #520027 100%), radial-gradient(80.18% 112.25% at 29.46% -2.5%, #00D5C8 0%, #2200AA 100%);
+    background-blend-mode: soft-light, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(19){
+    background: linear-gradient(115deg, rgb(211, 255, 215) 0%, rgb(0, 0, 0) 100%), radial-gradient(90% 100% at 50% 0%, rgb(200, 200, 200) 0%, rgb(22, 0, 45) 100%), radial-gradient(100% 100% at 50% 0%, rgb(250, 255, 0) 0%, rgb(36, 0, 0) 100%), radial-gradient(150% 213.32% at 100% 0%, rgb(112, 255, 0) 0%, rgb(20, 175, 125) 150%, rgb(0, 10, 255) 100%), radial-gradient(100% 200% at 100% 0%, rgb(255, 77, 0) 0%, rgba(0, 200, 255, 1) 100%), linear-gradient(60deg, rgb(255, 0, 0) 0%, rgb(120, 86, 255) 100%);
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(20){
+    background: linear-gradient(238.72deg, #FFEEEE 0%, #06002E 100%), radial-gradient(111% 111% at 74.29% -11%, #00DB3D 0%, #2C008A 100%), radial-gradient(111% 111% at 74.29% -11%, #FF0303 0%, #00718A 100%), radial-gradient(111.5% 111.5% at 83.93% 106%, #CC00FF 0%, #00239F 100%), linear-gradient(127.43deg, #535A00 0%, #DDFBFF 100%), linear-gradient(127.43deg, #B7D500 0%, #2200AA 100%);
+    background-blend-mode: overlay, difference, difference, difference, overlay, normal;
+}
+.wrapper .right section ul li:nth-of-type(21){
+    background: linear-gradient(114.95deg, #3A003C 0%, rgba(0, 71, 255, 0) 53.31%), linear-gradient(180deg, #00647A 0%, #FFA7A7 100%), linear-gradient(244.35deg, #FFB26A 0%, #C15151 50.58%, #00A3FF 100%), linear-gradient(244.35deg, #E03F3F 0%, #001665 49.48%, #FF0000 100%), radial-gradient(100% 233.99% at 0% 100%, #FF0000 0%, #AD00FF 100%), linear-gradient(307.27deg, #096F5C 0.37%, #687EB5 50.19%, #8877CE 100%), radial-gradient(100% 140% at 100% 0%, #FF00C7 0%, #006C7A 49.48%, #760000 100%);
+    background-blend-mode: overlay, overlay, overlay, overlay, difference, color-dodge, normal;
+}
+.wrapper .right section ul li:nth-of-type(22){
+    background: linear-gradient(231.46deg, #FFFFFF 15.51%, #01004A 100%), linear-gradient(238.72deg, rgba(255, 255, 255, 0.5) 53.13%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(62.41% 100% at 50% 0%, #4200FF 0%, #000000 100%), linear-gradient(307.27deg, #20FFD7 0.37%, #93C700 100%), radial-gradient(100% 140% at 100% 0%, #EAFF6B 0%, #00E0FF 71.37%, #2200AA 100%);
+    background-blend-mode: overlay, multiply, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(23){
+    background: radial-gradient(92.72% 100% at 50% 0%, rgba(215, 215, 215, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(92.72% 100% at 50% 0%, #FF0000 0%, #000000 100%), radial-gradient(109.21% 213.32% at 100% 0%, #000AFF 0%, #70FF00 100%), radial-gradient(109.21% 213.32% at 100% 0%, #FF4D00 0%, #00C2FF 100%), linear-gradient(127.43deg, #D50000 0%, #7856FF 100%);
+    background-blend-mode: overlay, difference, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(24){
+    background: linear-gradient(306.71deg, #003CD8 9.34%, #41B546 85.65%), linear-gradient(83.76deg, #5000F9 3.4%, #000000 96.6%), radial-gradient(70.71% 99% at 100% 39.75%, #7700D5 0%, #000000 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #2200AA 100%);
+    background-blend-mode: soft-light, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(25){
+    background: linear-gradient(151.47deg, #0500FF 0.49%, rgba(1, 0, 26, 0) 32.86%), linear-gradient(238.72deg, #FFFFFF 0%, #1F001C 100%), radial-gradient(100% 143.09% at 100% 0%, #000000 0%, #FFC700 100%), radial-gradient(100% 143.09% at 100% 0%, #5200FF 0%, #00113D 100%), radial-gradient(59.5% 100% at 49.32% 0%, #FF8A00 0%, #001AFF 100%), linear-gradient(121.28deg, #DBFF00 0%, #3300FF 100%), linear-gradient(121.28deg, #FF8A00 0%, #001AFF 100%), linear-gradient(180deg, #33FF00 0%, #FF0000 100%), radial-gradient(70.71% 99% at 100% 39.75%, #8000FF 0%, #FF0000 100%), radial-gradient(70.41% 100% at 50% 0%, #D5B300 0%, #00AA96 100%);
+    background-blend-mode: luminosity, soft-light, color-dodge, overlay, overlay, difference, difference, exclusion, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(26){
+    background: linear-gradient(127.43deg, #535A00 0%, #DDFBFF 100%), radial-gradient(111.5% 111.5% at 83.93% 106%, #CC00FF 0%, #00239F 100%), radial-gradient(111% 111% at 74.29% -11%, #A90000 0%, #027000 100%), linear-gradient(127.43deg, #B7D500 0%, #2200AA 100%);
+    background-blend-mode: overlay, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(27){
+    background: linear-gradient(180deg, #1400FF 0%, #000000 100%), linear-gradient(154.03deg, #33FF00 0%, #FF003D 74.04%), linear-gradient(341.1deg, #F3D0FC 7.52%, #1700A4 77.98%), linear-gradient(222.34deg, #A90000 12.99%, #00FFE0 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
+    background-blend-mode: overlay, difference, difference, difference, normal;
+}
+.wrapper .right section ul li:nth-of-type(28){
+    background: linear-gradient(310.45deg, rgba(12, 0, 154, 0.8) 20.74%, #FFFFFF 68.12%), radial-gradient(63.34% 100% at 50% 0%, #FFE091 0%, #190024 100%), linear-gradient(339.45deg, #00FF38 1.34%, #FF0000 73.07%), linear-gradient(201.13deg, #22F400 -0.47%, #DBFF00 100%), linear-gradient(94.04deg, #18007A 0%, #00D5C8 51.04%, #F4FF75 100%);
+    background-blend-mode: multiply, overlay, difference, difference, normal;   
+}
+.wrapper .right section ul li:nth-of-type(29){
+    background: linear-gradient(301.28deg, #F2BFBF 0%, #052600 100%), linear-gradient(244.35deg, rgba(164, 0, 0, 0.25) 0%, rgba(0, 163, 255, 0.25) 100%), linear-gradient(126.95deg, #110041 0%, #81D599 100%), radial-gradient(100% 233.99% at 0% 100%, #FF0000 0%, #00FFFF 100%), linear-gradient(307.27deg, #1DAC92 0.37%, #2800C6 100%), radial-gradient(100% 140% at 100% 0%, #EAFF6B 0%, #006C7A 57.29%, #2200AA 100%);
+    background-blend-mode: overlay, overlay, overlay, difference, difference, normal; 
+}
