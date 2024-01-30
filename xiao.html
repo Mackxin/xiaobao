@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宝报</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 200vh;
+      /* background: linear-gradient(to bottom right, #4CAF50, #45a049); 背景渐变色 */
+    }
 
-    </style>
+    button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50; /* 炫酷的背景颜色 */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049; /* hover时的背景颜色 */
+      transform: scale(1.1); /* hover时的缩放效果 */
+    }
+
+    .selected {
+      background-color: yellow;
+    }
+  </style>
+  <title>Random Link Selector</title>
 </head>
 <body>
-    <nav>
-        
-    </nav>
+  <button onclick="selectRandomLink()">Select Random Link</button>
+
+  <ul>
+    <li><a href="#link1">Link 1</a></li>
+    <li><a href="#link2">Link 2</a></li>
+    <li><a href="#link3">Link 3</a></li>
+    <li><a href="#link4">Link 4</a></li>
+    <!-- 添加更多的链接 -->
+  </ul>
+
+  <script>
+    function selectRandomLink() {
+      var links = document.querySelectorAll('a');
+      links.forEach(function(link) {
+        link.classList.remove('selected');
+      });
+
+      var randomIndex = Math.floor(Math.random() * links.length);
+      var randomLink = links[randomIndex];
+      randomLink.classList.add('selected');
+      randomLink.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>

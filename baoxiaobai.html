@@ -22,6 +22,29 @@
     <link rel="stylesheet" media="(min-width: 768px) and (max-width:1000px)" href="./css/2020/flat-768.css" />
     <link rel="stylesheet" media="(min-width: 374px) and (max-width:768px)" href="./css/2020/flat-375.css" />
     <link rel="stylesheet" media="(max-width: 374px)" href="./css/2020/mobile-375.css" />
+    <style>
+        button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            color: #7a7b97;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition:  0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #ff1d55; 
+            color: #ffffff;
+            font-size: .9rem;
+        }
+
+        .selected {
+            background-color: #ff1d55;
+        }
+    </style>
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -31,6 +54,19 @@
           s.parentNode.insertBefore(hm, s);
         })();
     </script>
+    <script defer>
+        function selectRandomLink() {
+          var links = document.querySelectorAll('a');
+          links.forEach(function(link) {
+            link.classList.remove('selected');
+          });
+    
+          var randomIndex = Math.floor(Math.random() * links.length);
+          var randomLink = links[randomIndex];
+          randomLink.classList.add('selected');
+          randomLink.scrollIntoView({ behavior: 'smooth' });
+        }
+      </script>
 </head>
 
 <body>
@@ -99,6 +135,7 @@
             </div>
             <div class="xin-top"></div>
         </div>
+        <button onclick="selectRandomLink()">随机选择</button>
         <div class="xin-right">
 
             <!-- <div class="zhiding">

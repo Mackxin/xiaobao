@@ -16,6 +16,29 @@
     <!-- 网页标题图标引导文件 -->
     <link rel="stylesheet" href="./css/2020/common.css">
     <link rel="stylesheet" href="./css/2020/qingbaoju.css">
+    <style>
+        button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            color: #7a7b97;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition:  0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #ff1d55; 
+            color: #ffffff;
+            font-size: .9rem;
+        }
+
+        .selected {
+            background-color: #222331;
+        }
+    </style>
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -25,10 +48,24 @@
           s.parentNode.insertBefore(hm, s);
         })();
     </script>
+    <script defer>
+        function selectRandomLink() {
+          var links = document.querySelectorAll('h2');
+          links.forEach(function(link) {
+            link.classList.remove('selected');
+          });
+    
+          var randomIndex = Math.floor(Math.random() * links.length);
+          var randomLink = links[randomIndex];
+          randomLink.classList.add('selected');
+          randomLink.scrollIntoView({ behavior: 'smooth' });
+        }
+      </script>
     
 </head>
 
 <body>
+    <button onclick="selectRandomLink()">随机选择</button>
     <header id="navbar">
         <div class="head">
             <h1>🏇宝小报</h1>
