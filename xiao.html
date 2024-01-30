@@ -1,65 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 200vh;
-      /* background: linear-gradient(to bottom right, #4CAF50, #45a049); 背景渐变色 */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
 
-    button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      background-color: #4CAF50; /* 炫酷的背景颜色 */
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    button:hover {
-      background-color: #45a049; /* hover时的背景颜色 */
-      transform: scale(1.1); /* hover时的缩放效果 */
-    }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+        }
 
-    .selected {
-      background-color: yellow;
-    }
-  </style>
-  <title>Random Link Selector</title>
+        section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            max-height: 160px;
+            box-sizing: border-box;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px; /* 调整盒子之间的间距 */
+        }
+
+        /* 最后一个盒子去掉右边距 */
+        .box:last-child {
+            margin-right: 0;
+        }
+
+        /* 设置锚点样式 */
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        /* 设置锚点目标样式 */
+        section div[id] {
+            margin-top: 0; /* 默认为0，稍后会被 JavaScript 动态修改 */
+        }
+    </style>
+    <title>Flex布局网页</title>
 </head>
 <body>
-  <button onclick="selectRandomLink()">Select Random Link</button>
+    <header>
+        <div class="nav">
+            <a href="#anchor1">Anchor 1</a>
+            <a href="#anchor2">Anchor 2</a>
+            <!-- 添加更多锚点 -->
+            <!-- ... -->
+        </div>
+    </header>
 
-  <ul>
-    <li><a href="#link1">Link 1</a></li>
-    <li><a href="#link2">Link 2</a></li>
-    <li><a href="#link3">Link 3</a></li>
-    <li><a href="#link4">Link 4</a></li>
-    <!-- 添加更多的链接 -->
-  </ul>
+    <section>
+        <div class="box">盒子1</div>
+        <div class="box">盒子2</div>
+        <div class="box">盒子3</div>
+        <div class="box">盒子4</div>
+    </section>
 
-  <script>
-    function selectRandomLink() {
-      var links = document.querySelectorAll('a');
-      links.forEach(function(link) {
-        link.classList.remove('selected');
-      });
+    <section>
+        <!-- 设置锚点目标 -->
+        <div id="anchor1">内容1</div>
+        <div id="anchor2">内容2</div>
+        <!-- 添加更多锚点目标 -->
+        <!-- ... -->
+    </section>
 
-      var randomIndex = Math.floor(Math.random() * links.length);
-      var randomLink = links[randomIndex];
-      randomLink.classList.add('selected');
-      randomLink.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取固定在页面上的 header 元素的高度
+            var headerHeight = document.querySelector('header').offsetHeight;
+
+            // 获取锚点目标元素
+            var anchorTargets = document.querySelectorAll('section div[id]');
+
+            // 动态计算并设置锚点目标的 margin-top
+            anchorTargets.forEach(function(target) {
+                target.style.marginTop = -headerHeight + 'px';
+            });
+
+            // 监听窗口滚动事件，调整滚动位置
+            window.addEventListener('scroll', function() {
+                // 获取滚动位置
+                var scrollPosition = window.scrollY || window.pageYOffset;
+
+                // 动态计算并设置锚点目标的 margin-top
+                anchorTargets.forEach(function(target) {
+                    target.style.marginTop = -headerHeight + 'px';
+                });
+
+                // 调整页面滚动位置
+                window.scrollTo(0, scrollPosition);
+            });
+        });
+    </script>
 </body>
 </html>
